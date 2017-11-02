@@ -2,5 +2,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftFormat"
+    name: "SwiftFormat",
+    products: [
+      .library(name: "SwiftFormat", targets: ["SwiftFormat"])
+    ],
+    targets: [
+        .target(
+            name: "SwiftFormat",
+            path: "Sources"
+        )
+    ]
 )
